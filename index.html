@@ -26,15 +26,15 @@
                     </h1>
                 </div>
                 <div class="header-right">
-                    <div class="header-nav">
-                        <ul>
-                            <li class="active"><a href="#card">Card</a></li>
-                            <li><a href="#news">News</a></li>
-                            <li><a href="#price">Price</a></li>
-                            <li><a href="#access">Access</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                    <nav class="header-nav">
+                        <ul class="header-nav-list">
+                            <li class="header-nav-item"><a class="to-link" href="#card">Card</a></li>
+                            <li class="header-nav-item"><a class="to-link" href="#news">News</a></li>
+                            <li class="header-nav-item"><a class="to-link" href="#price">Price</a></li>
+                            <li class="header-nav-item"><a class="to-link" href="#access">Access</a></li>
+                            <li class="header-nav-item"><a class="to-link" href="#contact">Contact</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -191,6 +191,29 @@
     </div>
 </section>
 
+<section id="qa">
+    <h3 class="question-title">Q&A</h3>
+    <div class="title-line"></div>
+    <div class="inner">
+        <dl>
+            <dt class="question"><span class="qa-title">Q</span>クリックするとどうなりますか？<span class="openclose"><img src="img/plus.svg" alt=""></span></dt>
+            <dd class="answer"><span class="answer-icon">A</span>アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。</dd>
+        </dl>
+        <dl>
+            <dt class="question"><span class="qa-title">Q</span>クリックするとどうなりますか？<span class="openclose"><img src="img/plus.svg" alt=""></span></dt>
+            <dd class="answer"><span class="answer-icon">A</span>アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。</dd>
+        </dl>
+        <dl>
+            <dt class="question"><span class="qa-title">Q</span>クリックするとどうなりますか？<span class="openclose"><img src="img/plus.svg" alt=""></span></dt>
+            <dd class="answer"><span class="answer-icon">A</span>アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。</dd>
+        </dl>
+        <dl>
+            <dt class="question"><span class="qa-title">Q</span>クリックするとどうなりますか？<span class="openclose"><img src="img/plus.svg" alt=""></span></dt>
+            <dd class="answer"><span class="answer-icon">A</span>アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。アコーディオンが開きます。</dd>
+        </dl>
+    </div>
+</section>
+
 <section id="contact" class="contact">
     <div class="inner">
         <h2 class="contact-title">Contact</h2>
@@ -223,16 +246,45 @@
         <label><input class="radio-test-2" type="radio" name="radio-name"><span>ラジオ３</span></label>
         </div>
         <div class="form-check">
-            <label><input class="check-test" type="checkbox" name="check-name"><span><p>プライバシーポリシー</p>に合意する</span></label>
+            <label><input class="check-test" type="checkbox" name="check-name"><span><p><a id="policy">プライバシーポリシー</a></p>に合意する</span></label>
         </div>
         <div class="form-button">
             <input class="submit-test" type="submit" value="送信する"><i class="fas fa-angle-right fa-2x"></i>
         </div>
-
+        <div id="modal" class="modal">
+ 
+            <!-- モーダルウインドウが開いている間のオーバーレイ -->
+            <div class="overlay modalclose"></div>
+         
+            <!-- モーダルウインドウの内容 -->
+            <div class="modal-inner">
+                <img id="batsu" class="modal-close" src="img/btn-batsu.svg" alt="">
+                <h4>プライバシーポリシー</h4>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>ほにゃらら</dt>
+                            <dd>ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>ほにゃらら</dt>
+                            <dd>ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div id="close" class="modal-close">閉じる</div>
+            </div>
+        </div><!-- modal end -->
     </div>    
     </div>
     </div>
 </section>
+
+<div class="floating">
+    <a class="chevron-up" href="#"><i class="fa fa-chevron-up fa-2x" aria-hidden="true" color="white"></i></a>
+  </div>
 
 <footer id="footer" class="footer">
     <div class="inner">
@@ -258,7 +310,6 @@
         <div class="footer-copy">
             <p>Copyright © 2018 @haniwa008 All rights reserved.</p>
         </div>
-        <a class="chevron-up" href="#header"><i class="fa fa-chevron-up" aria-hidden="true" color="white" background-color="blue" ></i></a>
     </div>
 
 </footer>
@@ -293,5 +344,58 @@
         new WOW().init();
     </script>
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+jQuery(window).on("scroll", function($) {
+  if (jQuery(this).scrollTop() > 100) {
+    jQuery('.floating').show();
+  } else {
+    jQuery('.floating').hide();
+  }
+});
+
+jQuery('.floating').click(function () {
+  jQuery('body,html').animate({
+    scrollTop: 0
+  }, 500);
+  return false;
+});
+</script>
+<script>
+$('.to-link').click(function() {
+    $('.to-link').removeClass('link-active');
+    $(this).addClass('link-active')
+});
+</script>
+<script>
+    $('.question').click(function() {
+    // 答えの要素を取得
+    let $answer = $(this).next();
+ 
+    if ($answer.hasClass('open')) {
+        $answer.removeClass('open');
+        $(this).find('.openclose').children('img').attr('src', 'img/plus.svg');
+        $(this).find('.openclose').css('top', '20px');
+    } else {
+        $answer.addClass('open');
+        // $(this).find('.openclose').text('-');
+        $(this).find('.openclose').children('img').attr('src', 'img/minus.svg');
+        $(this).find('.openclose').css('top', '12px');
+    }
+});
+
+</script>
+
+<script>
+    $('#policy').click(function() {
+    $('.modal').fadeIn();
+});
+ 
+// 閉じるクリック
+$('.modal-close').click(function() {
+    $('.modal').fadeOut();
+});
+
+</script>
 </body>
 </html>
