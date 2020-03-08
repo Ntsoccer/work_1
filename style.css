@@ -27,10 +27,10 @@ body {
 .header-right{
     margin-right: 140px;
 }
-.header .header-nav-list{
+.header ul{
     display: flex;
 }
-.header-nav p:not(:last-child){
+.header-nav li:not(:last-child){
     margin-right: 30px;
 }
 .header-nav a{
