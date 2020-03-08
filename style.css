@@ -27,15 +27,15 @@ body {
 .header-right{
     margin-right: 140px;
 }
-.header ul{
+.header .header-nav-list{
     display: flex;
 }
-.header-nav li:not(:last-child){
+.header-nav p:not(:last-child){
     margin-right: 30px;
 }
 .header-nav a{
     position: relative;
-    color: #ffffff;
+    color: white;
 }
 .header-nav {
   display: inline-block;
@@ -385,6 +385,7 @@ td{
   width: 904px;
   margin: 0 auto;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 .question {
   position: relative;
@@ -398,6 +399,7 @@ td{
 .openclose{
   position: absolute;
   right: 16px;
+  cursor: pointer;
 }
 .qa-title {
   font-weight: 900;
