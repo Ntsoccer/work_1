@@ -30,6 +30,9 @@ body {
 .header ul{
     display: flex;
 }
+.header-nav li{
+  display: flex;
+}
 .header-nav li:not(:last-child){
     margin-right: 30px;
 }
@@ -60,6 +63,9 @@ body {
 }
 .link-active {
   border-bottom: 2px solid red;
+}
+.drawer-container{
+  display: none;
 }
 
 #mainimage {
@@ -160,7 +166,7 @@ body {
     background-color: #efefef;
     padding: 68px 0 137px 0;
 }
-.card .inner,
+#card .inner,
 .News .inner,
 .price .inner,
 .access .inner,
@@ -169,7 +175,7 @@ body {
     margin: 0 auto;
     width: 100%;
 }
-.card .card-title,
+#card .card-title,
 .News .News-title,
 .price .price-title,
 .access .access-title,
@@ -180,7 +186,7 @@ body {
     font-weight: bold;
     text-align: center;
 }
-.card .title-line,
+#card .title-line,
 .News .title-line,
 .price .title-line,
 .access .title-line,
@@ -197,26 +203,12 @@ body {
     font-weight: bold;
 }
 .card-item{
-    background-color: #ffffff;
-    border-radius: 4px;
-    color: #6f7579;
-    height: 355px;
-    margin-right: 30px;
-    margin-bottom: 20px;
-    padding: 16px 16px 28px 16px;
-    width: calc(33.333% - 100px / 3);
-}
-.card-item::nth-child(3n){
-    margin-right: 0;
+  margin-bottom: 30px;
 }
 .card img{
     width: 100%;
 }
-.card-item-title{
-    font-size: 2em;
-    margin-top: 26px;
-    margin-bottom: 20px;
-}
+
 #news{
     background-color: #ffffff;
     padding: 68px 0 33px 0;
@@ -294,13 +286,13 @@ body {
 }
 .price img{
     margin-left: 10px;
-    margin-right: 120px;
 }
 table.tabletest{
     border: 1px solid #333;
     border-collapse: collapse;
     table-layout: fixed;
     width: 100%;
+    margin-left: 50px;
 }
 .price .section-contents{
     display: flex;
@@ -309,18 +301,18 @@ table.tabletest th,
 table.tabletest td{
     border: 1px solid #333;
 }
-th:first-child{
+.tabletest th:first-child{
     width: 100%;
 }
-th,td{
+.tabletest th,.tabletest td{
     width: 100%;
     height: 48px;
     text-align: center;
 }
-td span{
+.tabletest td span{
     color: red;
 }
-td{
+.tabletest td{
     text-align: right;
 }
 #price{
@@ -333,32 +325,25 @@ td{
 .content-info .text{
     position: relative;
     top: 20px;
+    margin-left: 50px;
 }
 #access{
     padding: 68px;
 }
-.iframe-wrap{
-    position: relative;
-    width: 100%;
-    padding-top: 50%;
+.content-map iframe{
+  position: relative;
+  width: 100%;
+  height:500px;
 }
-.iframe-wrap iframe{
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
+.access span{
+  margin-left:100px;
 }
-.access .content-map{
-    margin-left: 150px;
+.access p{
+  margin-left:350px
 }
-.access table td{
-    text-align: left;
-    width: 200px;
-}
-.access table{
-    margin-left: 180px;
-    margin-top: 41px;
+.access p:nth-child(1){
+  margin-top:50px
 }
 .access button{
     background-color: #3F51B5;
@@ -382,7 +367,6 @@ td{
   padding-bottom: 76px;
 }
 #qa dl{
-  width: 904px;
   margin: 0 auto;
   margin-bottom: 30px;
   cursor: pointer;
@@ -799,34 +783,51 @@ td{
  .header-right{
      display: none;
  }
- .header-mv h2{
-     font-size: 2.0em;
+ .drawer-container{
+   display: block;
  }
- .header-mv p{
-     font-size: 1.5em;
- }
- .header-mv .btn{
-     font-size: 1.2em;
- }
- .wrapper{
-     width: 100%;
- }
- .card .card-title,
+ .drawer-container ul{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr;
+}
+ #mainimage .inner h3{
+  font-size:2em;
+}
+#mainimage .inner p{
+  font-size:1.5em;
+}
+#mainimage .inner a{
+  font-size:1.5em; 
+}
+.drawer-container button{
+  margin-right:4vw;
+  margin-top:4vw
+}
+.swiper-button-prev{
+  margin-left:-11vw;
+  padding: 6vw;
+}
+.swiper-button-next{
+  margin-right:-12vw;
+  padding: 6vw;
+}
+#card .card-title,
 .News .News-title,
 .price .price-title,
 .access .access-title,
-.contact .contact-title{
+.contact .contact-title,
+#qa .question-title{
     font-size: 3.0em;
 }
-.card-item{
-    width: calc(100%);
-    margin-left: 6vw;
+.card-items{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr;
 }
-.card-item-title{
-    font-size: 1.5em;
-}
-.card-item-text{
-    font-size: 1.0em;
+.card{
+  width:95vw;
+  margin-left:-5vw
 }
 .news-list li,
 .news-list-2 li,
@@ -836,12 +837,28 @@ td{
     flex-wrap: wrap;
 }
 .label-4{
-    padding-left: 4vw!important;
-    width: 24vw;
-    margin-left: -5vw;
+  padding-left: 20vw!important;
+  position:relative;
+  left:-29px
+}
+.label-4 p{
+margin-left:-16vw;
+}
+#news ul{
+  margin-left:-5vw;
+}
+#news{
+  width:90%;
 }
 .more{
-    margin-left: 35vw;
+  position:relative;
+  left:-6vw;
+}
+.News-title{
+  margin-left:15vw;
+}
+.News .title-line{
+  margin-left:42vw;
 }
 .content-img{
     margin-left: -1vw;
@@ -851,17 +868,17 @@ td{
     display: block;
 }
 .tabletest{
-    margin-left:1.5vw;
+  margin-left:1.5vw;
 }
-th,td{
-    width: 32vw;
-    text-align: center;
+.tabletest th,.tabletest td{
+  width: 32vw;
+  text-align: center;
 }
-td{
-  text-align:right
+.tabletest td{
+text-align:right;
 }
-th:first-child{
-    width: 32vw;
+.tabletest th:first-child{
+  width: 32vw;
 }
 .content-info .text{
     position: relative;
@@ -893,7 +910,7 @@ th:first-child{
   .form-text-1,
   .form-text-2{
     margin-left:5vw;
-    margin-bottom:-5vw
+    margin-bottom:-5vw;
   }
   .form-text-3{
     margin-left:5vw;
@@ -912,7 +929,7 @@ th:first-child{
   }
   .form-label{
     display:flex;
-    margin-left:-53vw
+    margin-left:-53vw;
   }
   .form-check{
     margin-left:-100vw;
@@ -930,41 +947,61 @@ th:first-child{
     height:50vw;
   }
   #footer{
-    height:112vw
+    height:160vw;
   }
   .footer-content{
-    display:block
+    display:block;
   }
   .footer-left{
-    margin-left:23vw
+    margin-left:23vw;
   }
   .footer-left img{
-    margin-top:10vw
+    margin-top:10vw;
+    margin-left: -1vw;
   }
   .footer-left p{
-    margin-left:5vw
+    margin-left:4vw;
   }
   .footer-center{
     display:flex;
-    margin-top:8vw
+    margin-top:8vw;
+    margin-left:9vw!important;
   }
   .footer-center a{
-    margin-left:3vw
+    margin-left:3vw;
   }
   .footer-right{
-    margin-top:8vw
+    margin-top:8vw;
   }
   .footer-right img{ 
     margin-right:2vw;
     margin-left:11vw;   
   }
   .footer-copy{
-    margin-top:-10vw
+    margin-top:-10vw;
+    margin-left:1vw!important;
   }
-  .footer .svg-inline--fa{
-    position:relative;
-    left:85vw;
-    top:80px;
+  .question{
+    width:95vw;
+    margin-left:2.5vw;
+  }
+  #access iframe{
+    width:135vw;
+    padding-left:39vw;
+  }
+  .content-access p{
+    width:90vw;
+    margin-left:-10vw;
+  }
+  #access button{
+    margin-left:3vw;
+  }
+  #price .content-img{
+    margin-left:-0.3vw;
+  }
+  #price .tabletest{
+    margin-left:2vw;
+    width:90%;
   }
 }
 
